@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "chrome_extension_generator"
+  site-url: "https://radekosmulski.github.io/chrome_extension_generator"
+  description: "A quick way to generate the minimum boilerplate to start hacking on a chrome plugin."
+  repo-branch: main
+  repo-url: "https://github.com/radekosmulski/chrome_extension_generator"
