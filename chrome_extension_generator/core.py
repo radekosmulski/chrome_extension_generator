@@ -63,8 +63,8 @@ def create_manifest(path, name, desc, url):
 def main(
     name: Param("Name of the extension", str),
     desc: Param("Description of the extension", str)="",
-    url: Param("URL pattern to match (e.g. https://example.com/*)", str)="<URL>",
-    repo: Param("GitHub repository URL", str)="<repository URL>"
+    url: Param("URL pattern to match (e.g. https://example.com/*)", str)="<all_urls>",
+    repo: Param("GitHub repository URL", str)="www.example.com"
 ):
     "Generate a new Chrome extension with basic structure"
     # Create directory
