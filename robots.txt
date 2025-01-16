@@ -1,0 +1,1 @@
+Sitemap: https://radekosmulski.github.io/chrome_extension_generator/sitemap.xml

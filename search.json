@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "chrome_extension_generator",
+    "section": "",
+    "text": "A command-line tool to streamline the creation of Chrome extensions by automatically generating the required boilerplate files.",
+    "crumbs": [
+      "chrome_extension_generator"
+    ]
+  },
+  {
+    "objectID": "index.html#why",
+    "href": "index.html#why",
+    "title": "chrome_extension_generator",
+    "section": "Why?",
+    "text": "Why?\nChrome extensions are powerful tools for customizing your browsing experience, but setting up the basic structure can be repetitive. This tool was created to eliminate the tedious part of:\n\nCreating the correct directory structure\nWriting a basic manifest.json with proper Chrome Extension v3 format\nSetting up initial content scripts\nCreating documentation\n\nBy automating these common tasks, developers can focus on what matters: implementing their extension’s actual functionality.",
+    "crumbs": [
+      "chrome_extension_generator"
+    ]
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "chrome_extension_generator",
+    "section": "Installation",
+    "text": "Installation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/radekosmulski/chrome_extension_generator.git\nor from conda\n$ conda install -c radekosmulski chrome_extension_generator\nor from pypi\n$ pip install chrome_extension_generator",
+    "crumbs": [
+      "chrome_extension_generator"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "chrome_extension_generator",
+    "section": "Usage",
+    "text": "Usage\n\nCommand Line Interface\nAfter installation, you can use the command line tool directly:\nchrome-extension-generate --name \"My Extension\" --desc \"A cool extension\" --url \"https://example.com/*\"\n\n\nPython API\nYou can also use it programmatically in your Python code:\nfrom chrome_extension_generator.core import main\n\n\nParameters\n--name  Name of your extension (required)\n--desc  Short description of what your extension does (optional)\n--url   URL pattern where your extension will run (optional)\n--repo  GitHub repository URL (optional)",
+    "crumbs": [
+      "chrome_extension_generator"
+    ]
+  },
+  {
+    "objectID": "index.html#output-structure",
+    "href": "index.html#output-structure",
+    "title": "chrome_extension_generator",
+    "section": "Output Structure",
+    "text": "Output Structure\nyour-extension-name/\n├── README.md\n├── manifest.json\n└── content.js\nEach file is pre-populated with the provided information and formatted for easy reading and editing.",
+    "crumbs": [
+      "chrome_extension_generator"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nmain\n\n main (name:str&lt;Nameoftheextension&gt;,\n       desc:str&lt;Descriptionoftheextension&gt;='',\n       url:str&lt;URLpatterntomatch(e.g.https://example.com/*)&gt;='*://*/*',\n       repo:str&lt;GitHubrepositoryURL&gt;='www.example.com')\n\nGenerate a new Chrome extension with basic structure\n\nsource\n\n\ncreate_manifest\n\n create_manifest (path, name, desc, url)\n\nCreate manifest.json with provided details\n\nsource\n\n\ncreate_content_js\n\n create_content_js (path, name)\n\nCreate content.js with basic structure\n\nsource\n\n\ncreate_readme\n\n create_readme (path, name, desc, repo)\n\nCreate README.md with provided details",
+    "crumbs": [
+      "core"
+    ]
+  }
+]
