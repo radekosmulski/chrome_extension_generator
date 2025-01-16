@@ -35,12 +35,13 @@ git clone {repo}
 """
     path.joinpath('README.md').write_text(readme)
 
-def create_content_js(path):
+def create_content_js(path, name):
     "Create content.js with basic structure"
-    content = """// Run on page load
-document.addEventListener('DOMContentLoaded', () => {
+    content = f"""// Run on page load
+document.addEventListener('DOMContentLoaded', () => {{
   // your functionality goes here
-});
+  console.log('{name} loaded successfully');
+}});
 """
     path.joinpath('content.js').write_text(content)
 
@@ -63,7 +64,7 @@ def create_manifest(path, name, desc, url):
 def main(
     name: Param("Name of the extension", str),
     desc: Param("Description of the extension", str)="",
-    url: Param("URL pattern to match (e.g. https://example.com/*)", str)="<all_urls>",
+    url: Param("URL pattern to match (e.g. https://example.com/*)", str)="*://*/*",
     repo: Param("GitHub repository URL", str)="www.example.com"
 ):
     "Generate a new Chrome extension with basic structure"
@@ -73,7 +74,7 @@ def main(
     
     # Create files
     create_readme(path, name, desc, repo)
-    create_content_js(path)
+    create_content_js(path, name)
     create_manifest(path, name, desc, url)
     
     print(f"Created Chrome extension '{name}' in directory: {path}")
