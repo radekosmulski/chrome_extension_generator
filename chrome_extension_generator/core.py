@@ -40,7 +40,7 @@ def create_content_js(path, name):
     content = f"""// Run on page load
 document.addEventListener('DOMContentLoaded', () => {{
   // your functionality goes here
-  console.log('{name} loaded successfully');
+  console.log('{name} extension loaded successfully');
 }});
 """
     path.joinpath('content.js').write_text(content)
